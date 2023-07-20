@@ -1,0 +1,36 @@
+<script>
+        function validateForm() {
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var comment = document.getElementById("message").value;
+          
+          // Validate name, email, and comment
+          if (name === "" || email === "" || comment === "") {
+            alert("Please fill in all fields");
+            return false;
+          }
+          
+          // Validate email format using a regular expression
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!email.match(emailRegex)) {
+            alert("Please enter a valid email address");
+            return false;
+          }
+          
+          // Construct the message
+          var message = "Full Name: " + name + "\nEmail: " + email + "\nComment: " + comment;
+          
+          // Show the message in an alert
+          alert("Form submitted!\n\n" + message);
+          
+          // Form submission successful
+          return true;
+        }
+      </script>
+   
+    <footer>
+        <span>&copy; &copy; copy right 2023.</span>
+          
+        </footer>
+</body>
+</html>
